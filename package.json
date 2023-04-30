@@ -1,0 +1,30 @@
+{
+  "name": "bot-midjourney",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod": "npm run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "concurrently --kill-others npm:watch-*",
+    "watch": "concurrently --kill-others npm:watch-*",
+    "watch-typescript": "tsc -w",
+    "watch-node": "nodemon dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sylvainSUPINTERNET/bot-midjourney.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sylvainSUPINTERNET/bot-midjourney/issues"
+  },
+  "homepage": "https://github.com/sylvainSUPINTERNET/bot-midjourney#readme",
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "discord.js": "^14.9.0",
+    "dotenv": "^16.0.3"
+  }
+}
